@@ -15,10 +15,11 @@ fslib exposes a type called a Controller. Due to how Golang interfaces work, any
 ```
 Open(c *Control, filename string) error
 Close(c *Control, filename string) error
+Link(c *Control, from filename string) error
 Default(c *Control, cmd, from, msg string) error
 ```
 
-For our purposes, it suffices to know that the above messages will be called whenever a client writes `open <foo>`, `close <foo>`, or `somecmd <from buffer> <foo>`; and you'll be able to respond to it however you'd like. Canonically, `open` should always try to create a buffer for the named resource; such as joining a channel on a chat server, opening a text file for viewing, opening a particular web page; and close should do the inverse, removing the buffer itself from the eventual directories you create.
+For our purposes, it suffices to know that the above messages will be called whenever a client writes `open <foo>`, `close <foo>`, `link <foo>`, or `somecmd <from buffer> <foo>`; and you'll be able to respond to it however you'd like. Canonically, `open` should always try to create a buffer for the named resource; such as joining a channel on a chat server, opening a text file for viewing, opening a particular web page; and close should do the inverse, removing the buffer itself from the eventual directories you create. Link should take the current viewed buffer, and replace it outright with the resource located at foo.
 
 Let's try one
 
@@ -48,6 +49,11 @@ func (f *foo) Open(c *fslib.Control, filename string) error {
 
 func (f *foo) Close(c *fslib.Control, filename string) error {
 	return c.DeleteBuffer(filename, "document")
+}
+
+func (f *foo) Link(c *fslib.Control, from, filename string) error {
+	c.DeleteBufer(from, "document")
+	f.Open(c, filename)
 }
 
 func (f *foo) Default(c *fslib.Control, cmd, from, msg string) error {
