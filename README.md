@@ -1,10 +1,11 @@
-
+# All About Ubqt
 Welcome!
 
 
-## What Is ubqt?
+## What Is Ubqt?
 
-  ubqt is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
+  Ubqt is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
+  This is really a fancy way of saying it's a way not have to compromise between having applications that work well on one device, are only available on one device, and having what you want from an application, wherever you are; in a way that actually makes sense on the device you're using.
 
 ## Why?
 
