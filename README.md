@@ -1,6 +1,4 @@
-# ubqt-systems
-
-Welcome!
+# Welcome!
 
 ## What Is ubqt?
 
