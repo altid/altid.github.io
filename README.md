@@ -31,10 +31,10 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
 ## Alright. Alright. Where's The But?
 
-~Behind you.~
+-Behind you.-
 
   The downside for the average, happy user is as follows: services no longer describe the eventual user interface as fully as they do via HTML. It's inherently lossy - a pdf document will not render in the preferred font, the page layout semantics will not be honoured, and the images will not be center-justified or left/right justified as they present in the document.
-  If this is something you simply cannot give up, please feel free to contact the author of this page, @halfwit, and he will be happy to provide you a list of his favorite bespoke solutions for pixel-perfect document production; but please read on, there's another side to this coin.
+  If this is something you simply cannot give up, please feel free to contact the author of this page, [halfwit](https://github.com/halfwit), and he will be happy to provide you a list of his favorite bespoke solutions for pixel-perfect document production; but please read on, there's another side to this coin.
 
 ## PAO
 
