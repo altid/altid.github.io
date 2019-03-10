@@ -52,4 +52,4 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
   Further reading about the underlying architectural details can be found here
 
- - Coming Soon!
+ - [Architectural overview](https://github.com/ubqt-systems/ubqt-systems.github.io/blob/mastr/architecture.md)
