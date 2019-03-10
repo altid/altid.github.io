@@ -66,7 +66,7 @@ A server walks the working directory to find any services - that is, directories
  | input
  | notification
  | event
-
+ | feed
  | # <or>
  | document
  | # <or>
@@ -89,7 +89,7 @@ Clients read the above files, which are formatted in ubqt-flavoured markdown (li
 For example:
  - A `ctrl` file could be expressed as a nested menu, as the contents iterate available commands, and command history. 
  - A `status` file could be expressed as a statefully displayed toast when scrolling on a phone, or a persistent bar on a terminal client
-- A `sidebar` could slide out when requested, or be persistently shown
+ - A `sidebar` could slide out when requested, or be persistently shown
 
 None of these are considered authoritative, and by no means is this an exhaustive list. A client first and foremost should be designed in a manner that makes sense for where, how, and on what it is used. 
 
