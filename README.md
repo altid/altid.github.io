@@ -5,7 +5,8 @@ Welcome!
 ## What Is Ubqt?
 
   Ubqt is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
-  This is really a fancy way of saying it's a way not have to compromise between having applications that work well on one device, are only available on one device, and having what you want from an application, wherever you are; in a way that actually makes sense on the device you're using.
+
+  This is really a fancy way of saying with ubqt, you don't have to compromise with having applications that work well on one device, or are only available on one device. Instead, you get what you need from an application, in a way that actually makes sense on the device you're using.
 
 ## Why?
 
@@ -21,20 +22,21 @@ Welcome!
 
 ## Most Of My Stuff Works Fine
 
-  Great! You're among the many satisfied individuals. For many, especially the differently abled, the experience can be arduous for even the most simple tasks. As more services are moving strictly to the above described method, the situation threatens to worsten.
+  Great! You're among the many satisfied individuals. For many, especially the differently abled, the experience can be arduous for even the most simple tasks. As more services are moving strictly to the above described method, the situation threatens to worsen.
 
   That being said, discovery of satisfactory services is difficult. Searching for applications on each platform you use, vetting their quality, and finding ways to integrate them with other services is thirsty work. 
 
 ## What Is Ubqt Gonna Do About It?
 
-  Leveraging a ubqt network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
-The chance that you'll need a bespoke client and server side solution is lowered by ubqt. Many things can be wholly described via ubqt's structure, as many services are equally described via HTML.
+  Leveraging a Ubqt network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
+The chance that you'll need a bespoke client and server side solution is lowered by Ubqt. Many things can be wholly described via ubqt's structure, as many services are equally described via HTML.
 
 ## Alright. Alright. Where's The But?
 
--Behind you.-
+~~Behind you.~~
 
   The downside for the average, happy user is as follows: services no longer describe the eventual user interface as fully as they do via HTML. It's inherently lossy - a pdf document will not render in the preferred font, the page layout semantics will not be honoured, and the images will not be center-justified or left/right justified as they present in the document.
+
   If this is something you simply cannot give up, please feel free to contact the author of this page, [halfwit](https://github.com/halfwit), and he will be happy to provide you a list of his favorite bespoke solutions for pixel-perfect document production; but please read on, there's another side to this coin.
 
 ## PAO
@@ -43,11 +45,11 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
 ## Ubqt's Take On PAO
 
-  ubqt facilitates many of the tenets of pao. In addition, it challenges that the interface should match the device it's drawn on - browsing the internet on your mobile phone circa 2008 was a terrible experience, and only with much work from millions of people did it ever improve. On the face of the problem, this is solved. Taking a step back, it's not even close to solved - introduce a new device, such as a smart glass, a wearable, a toaster; and the design is back to the stone ages, unusable at worst, and unideal at best. 
+  Ubqt facilitates many of the tenets of PAO. In addition, it challenges that the interface should match the device it's drawn on - browsing the internet on your mobile phone circa 2008 was a terrible experience, and only with much work from millions of people did it ever improve. On the face of the problem, this is solved. Taking a step back, it's not even close to solved - introduce a new device, such as a smart glass, a wearable, a toaster; and the design is back to the stone ages, unusable at worst, and less than ideal at best. 
 
 ## Ubqt Clients
 
-  Due to the trivial nature of implementing a ubqt client, much care and time can be spent marrying the client implementation to the device it is presented on. Due to the very simple interface to the underlying state, concerns about how arbitrary data will be presented can be assuaged, and the focus can be solely on presenting the data in the way that best makes sense. Your toaster is safe from @media queries, finally.
+  Due to the trivial nature of implementing a Ubqt client, much care and time can be spent marrying the client implementation to the device it is presented on. Due to the very simple interface to the underlying state, concerns about how arbitrary data will be presented can be assuaged, and the focus can be solely on presenting the data in the way that best makes sense. Your toaster is safe from @media queries, finally.
 
 ## Design Details
 
