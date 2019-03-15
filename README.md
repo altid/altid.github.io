@@ -53,8 +53,8 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
 ## Design Details
 
-  Further reading about the underlying architectural details can be found here
-
+  Further reading can be found here
+ - [Ubqt-flavored Markdown](markdown.md)
  - [Architectural overview](architecture.md)
  - [Using listen_address](using-listen-address.md)
  
