@@ -122,7 +122,7 @@ If you're connected to an IRC channel, type some text to your friends, and when 
  - undofs: Edit documents with unlimited undo/redo, using the integrated Sam command language 
  - videofs: Search and watch video streams
 
-## List of Servers and Client
+## List of Servers and Clients
 
  - [9p server](https://github.com/ubqt-systems/9p-server): Uses 9p from Plan9
  - [9p server example client](https://github.com/ubqt-systems/9p-server/client)

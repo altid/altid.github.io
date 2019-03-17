@@ -51,10 +51,10 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
   Due to the trivial nature of implementing a Ubqt client, much care and time can be spent marrying the client implementation to the device it is presented on. Due to the very simple interface to the underlying state, concerns about how arbitrary data will be presented can be assuaged, and the focus can be solely on presenting the data in the way that best makes sense. Your toaster is safe from @media queries, finally.
 
-## Design Details
+## Further Reading
 
-  Further reading can be found here
  - [Ubqt-flavored Markdown](markdown.md)
  - [Architectural overview](architecture.md)
  - [Using listen_address](using-listen-address.md)
+ - [Basic Setup](basic-setup.md)
  
