@@ -125,7 +125,7 @@ If you're connected to an IRC channel, type some text to your friends, and when 
 ## List of Servers and Clients
 
  - [9p server](https://github.com/ubqt-systems/9p-server): Uses 9p from Plan9
- - [9p server example client](https://github.com/ubqt-systems/9p-server/client)
+ - [9p server example client](https://github.com/ubqt-systems/9p-server/blob/master/client/README.md)
  - [linux-client](https://github.com/ubqt-systems/linux-client): A compile-time plugin based client which allows you to select which server you want to connect to, what type of input you prefer to use, and the graphics drawing library you prefer for how you're using the client.
 
 ### Servers Planned
