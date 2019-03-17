@@ -5,7 +5,7 @@ A basic Ubqt setup involves three pieces:
  - One or more transport servers
  - A client to talk to the server
 
-(See [list of servers and clients](##list-of-servers-and-clients) below)
+(See [list of servers and clients](#list-of-servers-and-clients) below)
 
 ## Modifying Your ubqt.cfg
 
