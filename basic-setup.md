@@ -1,7 +1,7 @@
 # Walkthrough Of A Basic Setup
 
 A basic Ubqt setup involves three pieces:
- - One or more Ubqt services (See [list of services](##list-of-services) below)
+ - One or more Ubqt services (See [list of services](#list-of-services) below)
  - One or more transport servers
  - A client to talk to the server
 
