@@ -1,6 +1,6 @@
 # Complexity Tradeoffs
 
-> Controlling complexity is the essence of computer programming ­ Brian Kernighan
+> Controlling complexity is the essence of computer programming - Brian Kernighan
 
 As stated in the basic setup guide, Ubqt uses a three-tiered system, connecting clients to service through a server.
 
