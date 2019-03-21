@@ -4,7 +4,7 @@ We'll have some supplementary images in the coming weeks to help clarify this do
 
 ## Services - Directory Layout
 
-Ubqt services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here (coming soon).
+Ubqt services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here [markdown guide](markdown.md).
 
 A service directory is laid out as follows:
 
@@ -72,6 +72,7 @@ A server walks the working directory to find any services - that is, directories
  | # <or>
  | steam
 ```
+
 `title`, `sidebar`, and `input` are all optional.
 
  - `ctrl` is an append-only file which wraps the ctrl file of the underlying service, and intercepts writes for any control token it recognizes.
