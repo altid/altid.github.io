@@ -120,7 +120,7 @@ If you're connected to an IRC channel, type some text to your friends, and when 
  - newsfs: RSS aggregator and viewer
  - smsfs: Read, write, and view sms messages
  - undofs: Edit documents with unlimited undo/redo, using the integrated Sam command language 
- - videofs: Search and watch video streams
+ - videofs: Search and watch video streams, pause and switch devices
 
 ## List of Servers and Clients
 
