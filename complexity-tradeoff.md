@@ -16,7 +16,7 @@ This approach pushes much of the complexity to the client implementation. Either
 
 One of the initial goals of Ubqt was to defer a majority of computation to a centralized server in one's home.
 
-All of the state for a given session is a marriage of the services, and the server. The services provide a series of directories, and the server aggregates content from the directories and presents it to the client (this is described in more detail in the [architectural overview](architecture.md)). A bug introduced that would affect any running service would require work only on that specific service - no modifications to the server or any client would be needed.
+All of the state for a given session is a marriage of the services, and the server. The services provide a series of directories, and the server aggregates content from the directories and presents it to the client (this is described in more detail on the [architectural overview](architecture.md) page). A bug introduced that would affect any running service would require work only on that specific service - no modifications to the server or any client would be needed.
 
 ## Single Buffer View
 
