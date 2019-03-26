@@ -89,6 +89,7 @@ And it's ready to go! Now, these folders are interesting in their own right, but
 
 To connect to your running server is simple.
 
+
 ```
 # Using the example client
 > example localhost
@@ -98,9 +99,10 @@ Or if on a remote machine, and your 9p-server is on a machine with the ip addres
 
 ```
 # Using example client
-> example 192.168.1.104
+./example 192.168.1.104
 
 ```
+The default port it connects to is `:564`, make sure this matches if you've changed the listening port on 9p-server.
 
 ## Commands
 
