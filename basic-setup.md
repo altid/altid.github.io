@@ -7,9 +7,30 @@ A basic Ubqt setup involves three pieces:
 
 (See [list of servers and clients](#list-of-servers-and-clients) below)
 
+## Getting The Pieces
+
+For this example, we'll use ircfs, 9p-server, and its example client. These are all built with the Go programming language, which is currently required for a full Ubqt setup.
+
+Go has simple tooling for fetching source for, and building applications. Grabbing each, and building an executable can be done with just the following steps:
+
+```
+# We'll work in our own directory for now
+
+mkdir ubqt && cd ubqt 
+
+go get github.com/uqbt-systems/ircfs
+go build -o ircfs github.com/ubqt-systems/ircfs
+
+go get github.com/ubqt-systems/9p-server
+go build -o 9p-server github.com/ubqt-systems/9p-server
+go build -o client github.com/ubqt-systems/9p-server/client
+
+```
+
+This will create three binaries in your current directory. Later, you can simply `mv` these to somewhere in your PATH; or run the `go install` command for each binary.
+
 ## Modifying Your ubqt.cfg
 
-For this example, we'll use three services: `ircfs`, `docfs`, and `testfs`. You can find links to them, and other services below. 
 Most Ubqt services use a file called ubqt.cfg for their setup. It has a simple format
 
 ```
@@ -46,24 +67,19 @@ Add an entry for each service you wish to use to your ubqt.cfg; example entries 
 
 ## Running Ubqt
 
-Once your ubqt.cfg is set up, you're mostly good to go. Start up your services:
+Once your ubqt.cfg is set up, you're mostly good to go. Start up your service:
 
-```
-ircfs &
-docfs &
-testfs &
-```
+`./ircfs &`
 
-This will create a set of directories, by default in /tmp/ubqt.
+This will create a set of directories, one for each service, by default in /tmp/ubqt.
 
 ```
 > ls /tmp/ubqt
-/tmp/ubqt/irc
-/tmp/ubqt/docs
-/tmp/ubqt/test
+/tmp/ubqt/irc/
+/tmp/ubqt/otherservice/
 ```
 
-And they're ready to go! Now, these folders are interesting in their own right, but not particularily useful. To interact with these, you need a Ubqt server, and a client that can connect to it. For our example, we'll use 9p-server, and the simple example client that ships with it.
+And it's ready to go! Now, these folders are interesting in their own right, but not particularily useful. To interact with these, you need a Ubqt server, and a client that can connect to it. For our example, we'll use 9p-server, and the simple example client that ships with it.
 
 ## Server Set Up
 
@@ -100,9 +116,9 @@ As a side note, there are a number of commands you can run from a ubqt client. T
 
 In your client, type `/tabs` to see a list of currently opened buffers you can view.
 
-Now, to change to one of those buffers type `buffer <the tab you wish to view>`
+Now, to change to one of those buffers type `/buffer <the tab you wish to view>`
 
-This should cause the main document body of the tab you switched to, to be displayed. In the case of a service which constantly outputs new data, such as ircfs or discordfs, you'll see each new line as they come in for that buffer.
+This should cause the main document body of the tab you switched to, to be displayed. In the case of a service which constantly outputs new data, such as ircfs or discordfs, you'll see each new line as they come in for that buffer. Additionally, try typing `/title` to see the channel topic.
 
 If you're connected to an IRC channel, type some text to your friends, and when you're finished, type `/quit` to exit the client.
 
