@@ -58,3 +58,4 @@ The chance that you'll need a bespoke client and server side solution is lowered
  - [Using listen_address](using-listen-address.md)
  - [Basic Setup](basic-setup.md)
  - [The Complexity Tradeoff](complexity-tradeoff.md)
+ - [Writing services with fslib and cleanmark](writing-services-with-fslib-and-cleanmark.md)

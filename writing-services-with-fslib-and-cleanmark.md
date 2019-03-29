@@ -1,0 +1,101 @@
+# Writing Services with fslib and cleanmark
+
+[fslib](https://github.com/ubqt-systems/fslib) and [cleanmark](https://github.com/ubqt-systems/cleanmakr) were designed to trivialize writing conforment services.
+
+ - fslib provides a control file for issuing messages from a client to a service, as well as a file to provide input that is directed at a given `buffer` of a service. A buffer would include something like an IRC channel, sms message thread, etc.
+ - cleanmark provides facilities to escape markdown elements from raw text, convert html, as well as providing a mechanism to do the inverse through tokenization.
+
+> The libraries mentioned are all programmed, and meant for use with Golang
+> Refer to https://github.com/ubqt-systems/testfs for a full, simple implementation
+
+## Controller
+
+fslib exposes a type called a Controller. Due to how Golang interfaces work, any type can double as a controller, granted that it has three specific methods with the same definition (so, the same types of arguments to, and returning the same type of argments from, the ones listed below)
+
+```
+Open(c *Control, filename string) error
+Close(c *Control, filename string) error
+Default(c *Control, cmd, from, msg string) error
+```
+
+For our purposes, it suffices to know that the above messages will be called whenever a client writes `open <foo>`, `close <foo>`, or `somecmd <from buffer> <foo>`; and you'll be able to respond to it however you'd like. Canonically, `open` should always try to create a buffer for the named resource; such as joining a channel on a chat server, opening a text file for viewing, opening a particular web page; and close should do the inverse, removing the buffer itself from the eventual directories you create.
+
+Let's try one
+
+```
+package main
+
+import (
+	"github.com/ubqt-systems/fslib"
+)
+
+type foo struct {
+	// some items here of interest
+}
+
+func main() {
+	// error handling elided
+	c, _ := fslib.CreateCtrlFile(foo, "none", "/tmp/ubqt", "foo", "document")
+	c.Listen()
+}
+
+func (f *foo) Open(c *fslib.Control, filename string) error {
+	// fslib also exposes helper libs
+	// here we create a buffer, giving the main file name we wish to use throughout
+	// this must match what we include for CreateCtrlFile
+	return c.CreateBuffer(filename, "document")
+}
+
+func (f *foo) Close(c *fslib.Control, filename string) error {
+	return c.DeleteBuffer(filename, "document")
+}
+
+func (f *foo) Default(c *fslib.Control, cmd, from, msg string) error {
+	switch cmd {
+	case "foo":
+		// [...]
+	case "bar":
+		// [...]
+	}
+	return nil
+}
+```
+
+Generally, you'll want to do something more than just create an empty file, but this serves as a decent skeleton for further work.
+
+## Cleaning Text
+
+Consider something like the following
+
+```
+func (f *foo) Open(c *fslib.Control, filename string) error {
+	// errors elided
+	c.CreateBuffer(path.Join("/tmp/ubqt", filename), "document")
+	// MainWriter will write content to the correct "document"
+	mainWriter := c.MainWriter(filename, "document")
+	data, _ := ioutil.ReadFile(filename)
+	mainWriter.Write(data)
+	return err
+}
+
+```
+
+All content will be written and presented to the client unmodified. To avoid unwanted tokens being misinterpreted as markdown, we need to escape all the text.
+
+```
+func (f *foo) Open(c *fslib.Control, filename string) error {
+	c.CreateBuffer(path.Join("/tmp/ubqt", filename), "document")
+	mainWriter := c.MainWriter(filename, "document")
+	data, _ := ioutil.ReadFile(filename)
+	// cleanmark can accept a writer directly from fslib
+	cleaner := cleanmark.NewCleaner(mainWriter)
+	defer cleaner.Close()
+	_, err := cleaner.WriteEscaped(data)
+	return err	
+}
+```
+
+## Further Reading
+
+ - https://godoc.org/github.com/ubqt-systems/fslib
+ - https://godoc.org/github.com/ubqt-systems/cleanmark
