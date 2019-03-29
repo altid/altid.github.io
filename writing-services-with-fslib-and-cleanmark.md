@@ -1,11 +1,11 @@
 # Writing Services with fslib and cleanmark
 
-[fslib](https://github.com/ubqt-systems/fslib) and [cleanmark](https://github.com/ubqt-systems/cleanmakr) were designed to trivialize writing conforment services.
+[fslib](https://github.com/ubqt-systems/fslib) and [cleanmark](https://github.com/ubqt-systems/cleanmark) were designed to trivialize writing conforment services.
 
  - fslib provides a control file for issuing messages from a client to a service, as well as a file to provide input that is directed at a given `buffer` of a service. A buffer would include something like an IRC channel, sms message thread, etc.
  - cleanmark provides facilities to escape markdown elements from raw text, convert html, as well as providing a mechanism to do the inverse through tokenization.
 
-> The libraries mentioned are all programmed, and meant for use with Golang
+> The libraries mentioned are all programmed, and meant for use with Golang.
 > Refer to https://github.com/ubqt-systems/testfs for a full, simple implementation
 
 ## Controller
@@ -22,7 +22,7 @@ For our purposes, it suffices to know that the above messages will be called whe
 
 Let's try one
 
-```
+```Go
 package main
 
 import (
@@ -67,7 +67,7 @@ Generally, you'll want to do something more than just create an empty file, but 
 
 Consider something like the following
 
-```
+```Go
 func (f *foo) Open(c *fslib.Control, filename string) error {
 	// errors elided
 	c.CreateBuffer(path.Join("/tmp/ubqt", filename), "document")
