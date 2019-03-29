@@ -6,7 +6,7 @@
  - cleanmark provides facilities to escape markdown elements from raw text, convert html, as well as providing a mechanism to do the inverse through tokenization.
 
 > The libraries mentioned are all programmed, and meant for use with Golang.
-> Refer to https://github.com/ubqt-systems/testfs for a full, simple implementation
+> Refer to [testfs](https://github.com/ubqt-systems/testfs) for a full, simple implementation
 
 ## Controller
 
