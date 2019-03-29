@@ -22,7 +22,7 @@ For our purposes, it suffices to know that the above messages will be called whe
 
 Let's try one
 
-```Go
+```go
 package main
 
 import (
@@ -67,7 +67,7 @@ Generally, you'll want to do something more than just create an empty file, but 
 
 Consider something like the following
 
-```Go
+```go
 func (f *foo) Open(c *fslib.Control, filename string) error {
 	// errors elided
 	c.CreateBuffer(path.Join("/tmp/ubqt", filename), "document")
@@ -82,7 +82,7 @@ func (f *foo) Open(c *fslib.Control, filename string) error {
 
 All content will be written and presented to the client unmodified. To avoid unwanted tokens being misinterpreted as markdown, we need to escape all the text.
 
-```
+```go
 func (f *foo) Open(c *fslib.Control, filename string) error {
 	c.CreateBuffer(path.Join("/tmp/ubqt", filename), "document")
 	mainWriter := c.MainWriter(filename, "document")
@@ -97,5 +97,5 @@ func (f *foo) Open(c *fslib.Control, filename string) error {
 
 ## Further Reading
 
- - https://godoc.org/github.com/ubqt-systems/fslib
- - https://godoc.org/github.com/ubqt-systems/cleanmark
+ - [fslib godoc](https://godoc.org/github.com/ubqt-systems/fslib)
+ - [cleanmark godoc](https://godoc.org/github.com/ubqt-systems/cleanmark)
