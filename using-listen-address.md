@@ -1,13 +1,13 @@
 # Using listen_address
 
-A usual ubqt network exposes all services to all clients, at one IP address. This behavior can be changed, assigning an IP address per-service, or aggregating similar services to a single IP as a means of seperation of concerns. All your chat services could be accessed via an IP, that you set a router-level DNS entry for as `chat`; dialing that service with a ubqt client within your network is as simple as `myubqt-client chat`!
-In the same spirit, you can aggregate services to your client (if supported): `myubqt-client docs web code` and be ready to go on a coding adventure.
+A usual Altid network exposes all services to all clients, at one IP address. This behavior can be changed, assigning an IP address per-service, or aggregating similar services to a single IP as a means of seperation of concerns. All your chat services could be accessed via an IP, that you set a router-level DNS entry for as `chat`; dialing that service with an Altid client within your network is as simple as `myaltid-client chat`!
+In the same spirit, you can aggregate services to your client (if supported): `myaltid-client docs web code` and be ready to go on a coding adventure.
 
 ## Network Stack
 
 To allow this to happen, you first have to add IP addresses to your network stack. 
 
- * Run these commands for each entry, before starting your ubqt server(s)
+ * Run these commands for each entry, before starting your Altid server(s)
  * Using a listen_address which already has a DHCP reservation will not work. Consider setting static IP reservations for your listen addresses.
 
 ### Linux/*BSD
@@ -47,11 +47,11 @@ service=docs
 
 ### Port Setting
 
-In the above example, the docs service (docfs) uses an optional listen port, 4509. When unset, the default port will depend on which ubqt server you're connecting to. For example, 9p-server by default uses `:564`. In the above example, the actual address + port pair used would be `192.168.0.2:564`
+In the above example, the docs service (docfs) uses an optional listen port, 4509. When unset, the default port will depend on which Altid server you're connecting to. For example, 9p-server by default uses `:564`. In the above example, the actual address + port pair used would be `192.168.0.2:564`
 
 ## Wrapping Up
 
-To ease starting up a ubqt network, it's strongly suggested to create a startup script.
+To ease starting up an Altid network, it's strongly suggested to create a startup script.
 
 For example on Linux/*BSD:
 
