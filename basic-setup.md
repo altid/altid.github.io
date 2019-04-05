@@ -1,7 +1,7 @@
 # Walkthrough Of A Basic Setup
 
-A basic Ubqt setup involves three pieces:
- - One or more Ubqt services (See [list of services](#list-of-services) below)
+A basic Altid setup involves three pieces:
+ - One or more Altid services (See [list of services](#list-of-services) below)
  - One or more transport servers
  - A client to talk to the server
 
@@ -9,32 +9,32 @@ A basic Ubqt setup involves three pieces:
 
 ## Getting The Pieces
 
-For this example, we'll use ircfs, 9p-server, and its example client. These are all built with the Go programming language, which is currently required for a full Ubqt setup.
+For this example, we'll use ircfs, 9p-server, and its example client. These are all built with the Go programming language, which is currently required for a full Altid setup.
 
 Go has simple tooling for fetching source for, and building applications. Grabbing each, and building an executable can be done with just the following steps:
 
 ```
 # We'll work in our own directory for now
 
-mkdir ubqt && cd ubqt 
+mkdir altid && cd altid 
 
-go get github.com/uqbt-systems/ircfs
-go build -o ircfs github.com/ubqt-systems/ircfs
+go get github.com/altid/ircfs
+go build -o ircfs github.com/altid/ircfs
 
-go get github.com/ubqt-systems/9p-server
-go build -o 9p-server github.com/ubqt-systems/9p-server
-go build -o client github.com/ubqt-systems/9p-server/client
+go get github.com/altid/9p-server
+go build -o 9p-server github.com/altid/9p-server
+go build -o client github.com/altid/9p-server/client
 
 ```
 
 This will create three binaries in your current directory. Later, you can simply `mv` these to somewhere in your PATH; or run the `go install` command for each binary.
 
-## Modifying Your ubqt.cfg
+## Modifying Your altid/config
 
-Most Ubqt services use a file called ubqt.cfg for their setup. It has a simple format
+Most Altid services use a file called altid/config for their setup. It has a simple format:
 
 ```
-# Example ubqt.cfg
+# Example altid/cfg
 
 service=irc server=irc.freenode.net port=6667 ssl=none
 	log=/home/halfwit/logs
@@ -52,7 +52,7 @@ For a given service, there will always be at least one flag, `service=`.
 `log=` is present in each section here, but it is also allowable to set it globally, as follows
 
 ```
-# Example2 ubqt.cfg
+# Example2 altid/config
 
 service=irc server=irc.freenode.net port=6667 ssl=none
 	# user details here
@@ -63,23 +63,23 @@ service=test
 
 ```
 
-Add an entry for each service you wish to use to your ubqt.cfg; example entries are found on the main page of each service listed below.
+Add an entry for each service you wish to use to your altid/config example entries are found on the main page of each service listed below.
 
-## Running Ubqt
+## Running Altid
 
-Once your ubqt.cfg is set up, you're mostly good to go. Start up your service:
+Once your altid/config is set up, you're mostly good to go. Start up your service:
 
 `./ircfs &`
 
-This will create a set of directories, one for each service, by default in /tmp/ubqt.
+This will create a set of directories, one for each service, by default in /tmp/altid.
 
 ```
-> ls /tmp/ubqt
-/tmp/ubqt/irc/
-/tmp/ubqt/otherservice/
+> ls /tmp/altid
+/tmp/altid/irc/
+/tmp/altid/otherservice/
 ```
 
-And it's ready to go! Now, these folders are interesting in their own right, but not particularily useful. To interact with these, you need a Ubqt server, and a client that can connect to it. For our example, we'll use 9p-server, and the simple example client that ships with it.
+And it's ready to go! Now, these folders are interesting in their own right, but not particularily useful. To interact with these, you need an Altid server, and a client that can connect to it. For our example, we'll use 9p-server, and the simple example client that ships with it.
 
 ## Server Set Up
 
@@ -106,7 +106,7 @@ The default port it connects to is `:564`, make sure this matches if you've chan
 
 ## Commands
 
-As a side note, there are a number of commands you can run from a ubqt client. The whole list depends on the service you are connected to, but the following will always be available:
+As a side note, there are a number of commands you can run from an Altid client. The whole list depends on the service you are connected to, but the following will always be available:
 
  - `buffer <buffer>`: change the current viewed buffer
  - `open <buffer>`: open a buffer
@@ -126,9 +126,9 @@ If you're connected to an IRC channel, type some text to your friends, and when 
 
 ## List of Services
 
- - [ircfs](https://github.com/ubqt-systems/ircfs): Connect and chat people on IRC networks
- - [docfs](https://github.com/ubqt-systems/docfs): Read PDF and EPUB files
- - [testfs](https://github.com/ubqt-systems/testfs): Open text files to view and modify text
+ - [ircfs](https://github.com/altid/ircfs): Connect and chat people on IRC networks
+ - [docfs](https://github.com/altid/docfs): Read PDF and EPUB files
+ - [testfs](https://github.com/altid/testfs): Open text files to view and modify text
 
 ### Services Planned
  - gamefs: Play retro games!
@@ -142,18 +142,18 @@ If you're connected to an IRC channel, type some text to your friends, and when 
 
 ## List of Servers and Clients
 
- - [9p server](https://github.com/ubqt-systems/9p-server): Uses 9p from Plan9
- - [9p server example client](https://github.com/ubqt-systems/9p-server/blob/master/client/README.md)
- - [linux-client](https://github.com/ubqt-systems/linux-client): A compile-time plugin based client which allows you to select which server you want to connect to, what type of input you prefer to use, and the graphics drawing library you prefer for how you're using the client.
+ - [9p server](https://github.com/altid/9p-server): Uses 9p from Plan9
+ - [9p server example client](https://github.com/altid/9p-server/blob/master/client/README.md)
+ - [linux-client](https://github.com/altid/linux-client): A compile-time plugin based client which allows you to select which server you want to connect to, what type of input you prefer to use, and the graphics drawing library you prefer for how you're using the client.
 
 ### Servers Planned
 
- - html5 server: Access ubqt via a web browser
- - ssh server: Access ubqt through an ssh tunnel
+ - html5 server: Access altid via a web browser
+ - ssh server: Access altid through an ssh tunnel
 
 ### Clients Planned
 
  - plan9-client: Simple client for use on the Plan9 operating system
  - plan9-nuklear: A variant of the plan9 client using the Nuklear immediate mode UI library
- - Android/iOS mobile client: Touch-based interface to ubqt
+ - Android/iOS mobile client: Touch-based interface to altid
  - Kodi client: linux-client based Kodi plugin
