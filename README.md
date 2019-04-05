@@ -1,12 +1,12 @@
-# All About Ubqt
+# All About Altid
 
 Welcome!
 
-## What Is Ubqt?
+## What Is Altid?
 
-  Ubqt is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
+  Altid is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
 
-  This is really a fancy way of saying with ubqt, you don't have to compromise with having applications that work well on one device, or are only available on one device. Instead, you get what you need from an application, in a way that actually makes sense on the device you're using.
+  This is really a fancy way of saying with altid, you don't have to compromise with having applications that work well on one device, or are only available on one device. Instead, you get what you need from an application, in a way that actually makes sense on the device you're using.
 
 ## Why?
 
@@ -26,10 +26,10 @@ Welcome!
 
   That being said, discovery of satisfactory services is difficult. Searching for applications on each platform you use, vetting their quality, and finding ways to integrate them with other services is thirsty work. 
 
-## What Is Ubqt Gonna Do About It?
+## What Is Altid Gonna Do About It?
 
-  Leveraging a Ubqt network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
-The chance that you'll need a bespoke client and server side solution is lowered by Ubqt. Many things can be wholly described via ubqt's structure, as many services are equally described via HTML.
+  Leveraging a Altid network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
+The chance that you'll need a bespoke client and server side solution is lowered by Altid. Many things can be wholly described via altid's structure, as many services are equally described via HTML.
 
 ## Alright. Alright. Where's The But?
 
@@ -43,17 +43,17 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
   In the very first paragraph, there was a link to an article about persistent application omnipresence. If you didn't chance to read it, a basic summary is that your applications follow you from device to device. That is to say, you can stop midway through typing an email on your desktop computer, have to leave unexpectedly, open your phone, and continue typing exactly where you left off. This is a feature of quite a few interesting services; but it is non-trivial to implement this well. Also, the author explains that this should be the default, for every service that they want. 
 
-## Ubqt's Take On PAO
+## An Altid Take On PAO
 
-  Ubqt facilitates many of the tenets of PAO. In addition, it challenges that the interface should match the device it's drawn on - browsing the internet on your mobile phone circa 2008 was a terrible experience, and only with much work from millions of people did it ever improve. On the face of the problem, this is solved. Taking a step back, it's not even close to solved - introduce a new device, such as a smart glass, a wearable, a toaster; and the design is back to the stone ages, unusable at worst, and less than ideal at best. 
+  Altid facilitates many of the tenets of PAO. In addition, it challenges that the interface should match the device it's drawn on - browsing the internet on your mobile phone circa 2008 was a terrible experience, and only with much work from millions of people did it ever improve. On the face of the problem, this is solved. Taking a step back, it's not even close to solved - introduce a new device, such as a smart glass, a wearable, a toaster; and the design is back to the stone ages, unusable at worst, and less than ideal at best. 
 
-## Ubqt Clients
+## Altid Clients
 
-  Due to the trivial nature of implementing a Ubqt client, much care and time can be spent marrying the client implementation to the device it is presented on. Due to the very simple interface to the underlying state, concerns about how arbitrary data will be presented can be assuaged, and the focus can be solely on presenting the data in the way that best makes sense. Your toaster is safe from @media queries, finally.
+  Due to the trivial nature of implementing an Altid client, much care and time can be spent marrying the client implementation to the device it is presented on. Due to the very simple interface to the underlying state, concerns about how arbitrary data will be presented can be assuaged, and the focus can be solely on presenting the data in the way that best makes sense. Your toaster is safe from @media queries, finally.
 
 ## Further Reading
 
- - [Ubqt-flavored Markdown](markdown.md)
+ - [Altid-flavored Markdown](markdown.md)
  - [Architectural overview](architecture.md)
  - [Using listen_address](using-listen-address.md)
  - [Basic Setup](basic-setup.md)
