@@ -1,6 +1,6 @@
-# Ubqt-flavored markdown
+# Altid-flavored markdown
 
-Below is a list of markdown elements supported by ubqt, as well as a rough example of how they may be displayed by a client.
+Below is a list of markdown elements supported by altid, as well as a rough example of how they may be displayed by a client.
 
 ## From Common
 
@@ -64,7 +64,7 @@ code
 `~~strikethrough~~`
 ~~strikethrough~~
 
-## Ubqt
+## Altid
 
 Images:
 `![alt text of image](/path/to/image "Image text")`
@@ -81,5 +81,5 @@ Checkboxes:
 
 ## Future
 
-As ubqt grows and is used for more purposes, this list will undoubtedly change.
-Cleanmark is considered to provide an API reference to the current state of the art for ubqt markdown, and any breaking changes will constitute a release of cleanmark. All changes will discussed in the release notes.
+As altid grows and is used for more purposes, this list will undoubtedly change.
+Cleanmark is considered to provide an API reference to the current state of the art for altid markdown, and any breaking changes will constitute a release of cleanmark. All changes will discussed in the release notes.
