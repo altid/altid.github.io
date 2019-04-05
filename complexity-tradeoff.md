@@ -2,7 +2,7 @@
 
 > Controlling complexity is the essence of computer programming - Brian Kernighan
 
-As stated in the basic setup guide, Ubqt uses a three-tiered system, connecting clients to service through a server.
+As stated in the basic setup guide, Altid uses a three-tiered system, connecting clients to service through a server.
 
 This is a powerful abstraction, and is used by many solutions. The client only has to know how to talk to the server, and the services only have to know how to talk to the server.
 
@@ -12,15 +12,15 @@ In a modern computing environment, services are expressed in a multitude of ways
 
 This approach pushes much of the complexity to the client implementation. Either it has to be very generalized, and able to interface well with nearly arbitrary service implementations, as is the case with Emacs and a web browser; or it's a singular purpose, bespoke client which may take many thousands of hours to perfect, and make bug free. Additionally, as with many things related to computing, the very dynamic landscape leads to new bugs that must be dealt with, for each client.
 
-## Ubqt's Complexity Model
+## Altid's Complexity Model
 
-One of the initial goals of Ubqt was to defer a majority of computation to a centralized server in one's home.
+One of the initial goals of Altid was to defer a majority of computation to a centralized server in one's home.
 
 All of the state for a given session is a marriage of the services, and the server. The services provide a series of directories, and the server aggregates content from the directories and presents it to the client (this is described in more detail on the [architectural overview](architecture.md) page). A bug introduced that would affect any running service would require work only on that specific service - no modifications to the server or any client would be needed.
 
 ## Single Buffer View
 
-A ubqt client is served a single view, representing a single buffer of a single service (For more information about buffers and services, refer to the [overview](README.md). It can request to switch to other buffers, and also has a list of all available buffers via `tabs`; but fundamentally a single connection to a server results in a single buffer view. 
+An Altid client is served a single view, representing a single buffer of a single service (For more information about buffers and services, refer to the [overview](README.md). It can request to switch to other buffers, and also has a list of all available buffers via `tabs`; but fundamentally a single connection to a server results in a single buffer view. 
 
 This may seem limiting, but due to the very simple, stable client implementations that result, clients may wish to issue multiple connections, to multiple services at once, providing for a very granular approach to setting up a client. For example, one could connect to Discord, IRC, sms, Slack, email, or any number of other chats in a single client window. Depending on the client implementation, you would see an aggregate of all tabs opened. 
 
@@ -46,7 +46,7 @@ Many of the things mentioned above would not be simple with a different model fo
 
 ## Author's Note
 
-All of these tradeoffs are less than ideal, but in practice the lossy nature allows me to read a document on my phone, walk over to my computer, and continue reading instantly; the same for any ubqt service. Defining a state, (not as a relationship with a client), as a standalone entity for sessions is what many services on the web are accomplishing, but the bar to entry to provide such a thing is high, expensive, and resource-intensive.
+All of these tradeoffs are less than ideal, but in practice the lossy nature allows me to read a document on my phone, walk over to my computer, and continue reading instantly; the same for any Altid service. Defining a state, (not as a relationship with a client), as a standalone entity for sessions is what many services on the web are accomplishing, but the bar to entry to provide such a thing is high, expensive, and resource-intensive.
 
-If you wish to discuss this, or anything else, feel free to join us at #ubqt on Freenode.
+If you wish to discuss this, or anything else, feel free to join us at #altid on Freenode.
 I'm always happy to hear opinions, suggestions, and feedback!
