@@ -28,7 +28,7 @@ Welcome!
 
 ## What Is Altid Gonna Do About It?
 
-  Leveraging a Altid network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
+  Leveraging an Altid network, adding a service that suits your needs is much more trivial; the overall state for a calendar of upcoming tasks is a set of lists, with links to the individual appointments - very trivial indeed!
 The chance that you'll need a bespoke client and server side solution is lowered by Altid. Many things can be wholly described via altid's structure, as many services are equally described via HTML.
 
 ## Alright. Alright. Where's The But?
