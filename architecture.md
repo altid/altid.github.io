@@ -86,7 +86,7 @@ A server in Altid multiplexes connections to the underlying state. That is to sa
 
 ## Clients
 
-Clients read the above files, which are formatted in ubqt-flavoured markdown (link coming soon). For a given element, they draw up a UI in the manner they see fit.
+Clients read the above files, which are formatted in Altid-flavoured markdown (link coming soon). For a given element, they draw up a UI in the manner they see fit.
 For example:
  - A `ctrl` file could be expressed as a nested menu, as the contents iterate available commands, and command history. 
  - A `status` file could be expressed as a statefully displayed toast when scrolling on a phone, or a persistent bar on a terminal client
