@@ -2,11 +2,11 @@
 
 *DISCLAIMER* This is an early draft, and has not been fully vetted. Use at your own risk.
 
-Transport Layer Security, or TLS can be used to provide a secure communications channel between Ubqt servers and clients, and is also optional for use in many Ubqt services that connect to internet resources.
+Transport Layer Security, or TLS can be used to provide a secure communications channel between Altid servers and clients, and is also optional for use in many Altid services that connect to internet resources.
 
 ## Certificates, Keys
 
-Ubqt uses certificate and key pairs to establish TLS connections.
+Altid uses certificate and key pairs to establish TLS connections.
 
 In order to connect securely, we need to create a certificate and key on both the server, and the client.
 
@@ -16,18 +16,18 @@ Related reading:
 
 ## Server
 
-In many applications, self-signed certificates are unwanted, due to the client/server trust being broken. However, for most common ubqt installations, the same authority manages both sides. (You!)
+In many applications, self-signed certificates are unwanted, due to the client/server trust being broken. However, for most common Altid installations, the same authority manages both sides. (You!)
 To use Certificate Authorities, such as Let's Encrypt is also possible, and will be covered in future versions of this guide.
 
 For systems with openssl, generating a self-signed key/pair can be done as follows:
 
-`openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out -etc/ssl/certs/ubqt.pem -keyout /etc/ssl/private/ubqt.pem`
+`openssl req -newkey rsa:4096 -nodes -sha512 -x509 -days 3650 -nodes -out -etc/ssl/certs/altid.pem -keyout /etc/ssl/private/altid.pem`
 
 This will create the two named files, and the server will look for each under that specific name, if none is provided on the command line.
 
 To sign client certificates, we need a Certificate Signing Request file, for example:
 
-`openssl req -new -eky /etc/ssl/private/ubqt.pem -out /etc/ssl/certs/ubqt.csr`
+`openssl req -new -eky /etc/ssl/private/altid.pem -out /etc/ssl/certs/altid.csr`
 
 ### Plan9
 
@@ -39,21 +39,21 @@ Generate a server certificate + key:
 # Make sure we create this in volatile storage
 ramfs -p
 cd /tmp
-auth/rsagen -t 'service=tls owner=myuser' > ubqtserver.key
-auth/rsa2x509 'C=US CN=*.myfdqn.com' ubqtserver.key | auth/pemencode CERTIFICATE > cert
+auth/rsagen -t 'service=tls owner=myuser' > altidserver.key
+auth/rsa2x509 'C=US CN=*.myfdqn.com' altidserver.key | auth/pemencode CERTIFICATE > cert
 
 # Move your certifiate to somewhere non-volatile
 # By default, on plan9 the servers will look in the following directory:
-mv cert $home/lib/ubqt/cert.pem
+mv cert $home/lib/altid/cert.pem
 
 # And read the key into your factotum
-cat ubqtserver.key > /mnt/factotum/ctl
+cat altidserver.key > /mnt/factotum/ctl
 
 # You'll likely want to back this key up to your secstore, or somewhere else safe
-auth/secstore -p ubqtserver.key
+auth/secstore -p altidserver.key
 
 # If you don't use a secstore to set up your factotum on boot, remember to read it in on boot, by adding the following to /cfg/$sysname/cpustart
-cat /path/to/my/ubqtserver.key > /mnt/factotum/ctl
+cat /path/to/my/altidserver.key > /mnt/factotum/ctl
 
 # And finally, delete the work window.
 ```
@@ -73,7 +73,7 @@ openssl req -new -key myclient.key -out myclient.csr
 
 # Sign the request to create a valid cert
 # We'll make it last 1024 days
-openssl x509 -req -in myclient.csr -CA /etc/ssl/certs/ubqt.pem -CAkey /etc/ssl/private/ubqt.pem -CAcreateserial -out myclient.pem -days 1024 -sha512
+openssl x509 -req -in myclient.csr -CA /etc/ssl/certs/altid.pem -CAkey /etc/ssl/private/altid.pem -CAcreateserial -out myclient.pem -days 1024 -sha512
 ```
 
 ### Plan9
@@ -84,10 +84,10 @@ ramfs -p
 cd /tmp
 
 # Create the client key
-auth/rsagen -t 'service=tls owner=myusername' > ubqtclient.key
+auth/rsagen -t 'service=tls owner=myusername' > altidclient.key
 
 # Create a csr from key
-auth/rsa2csr 'CN=example.com' ubqtclient.key | auth/pemencode 'CERTIFICATE REQUEST' > ubqtclient.csr
+auth/rsa2csr 'CN=example.com' altidclient.key | auth/pemencode 'CERTIFICATE REQUEST' > altidclient.csr
 
 # Sign your key
 # At the time of this writing, I don't know how to sign a key on plan9. Any help here is appericated. I do it on a Linux machine, hopefully you have one available.
