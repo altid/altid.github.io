@@ -4,7 +4,7 @@ We'll have some supplementary images in the coming weeks to help clarify this do
 
 ## Services - Directory Layout
 
-Ubqt services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here [markdown guide](markdown.md).
+Altid services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here [markdown guide](markdown.md).
 
 A service directory is laid out as follows:
 
@@ -50,8 +50,8 @@ Inside of those directories is a subset of files, which must include:
  - `notification` is used to signify that the service wishes to signify clients of an important occurance, such as an @mention in a chat client
 
 ## Services - Interaction With Clients And Servers
-These individual pieces are combined with a ctrl file, events file, and tabs file from the root of the directory by a ubqt server, such as 9p server.
-The result is served, somewhat modified to a ubqt client for drawing.
+These individual pieces are combined with a ctrl file, events file, and tabs file from the root of the directory by an Altid server, such as 9p server.
+The result is served, somewhat modified to an Altid client for drawing.
 
 ## Servers
 
@@ -82,7 +82,7 @@ A server walks the working directory to find any services - that is, directories
 
 ## Servers - Client Connections
 
-A server in ubqt multiplexes connections to the underlying state. That is to say, each client may have a unique view from other connected clients. Different clients can be connected to different services, be viewing a different buffer, or the same services and/or buffer. Any content updated will be sent to all clients where applicable.
+A server in Altid multiplexes connections to the underlying state. That is to say, each client may have a unique view from other connected clients. Different clients can be connected to different services, be viewing a different buffer, or the same services and/or buffer. Any content updated will be sent to all clients where applicable.
 
 ## Clients
 
@@ -100,4 +100,4 @@ If you find limitations in any of the design to express a service well, please o
 If you find that you don't have enough information to thoroughly describe a service in a client implementation, again; please open an issue!
 
 Aside from the author: 
-The goal of ubqt is to present data across a gamut of devices in a usable manner, in ways that work well with a given task or use case. To meet this goal, accurate, faithful recreation of a designers' work simply isn't possible. This is unfortunate, as I hold high respect for graphical designers, and have often marvelled at the amazing creations people have produced over the years. 
+The goal of Altid is to present data across a gamut of devices in a usable manner, in ways that work well with a given task or use case. To meet this goal, accurate, faithful recreation of a designers' work simply isn't possible. This is unfortunate, as I hold high respect for graphical designers, and have often marvelled at the amazing creations people have produced over the years. 
