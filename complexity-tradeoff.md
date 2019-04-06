@@ -2,7 +2,7 @@
 
 > Controlling complexity is the essence of computer programming - Brian Kernighan
 
-As stated in the basic setup guide, Altid uses a three-tiered system, connecting clients to service through a server.
+As stated in the basic setup guide, Altid uses a three-tiered system, connecting clients to services through servers.
 
 This is a powerful abstraction, and is used by many solutions. The client only has to know how to talk to the server, and the services only have to know how to talk to the server.
 

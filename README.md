@@ -60,3 +60,7 @@ The chance that you'll need a bespoke client and server side solution is lowered
  - [Full TLS Setup](full-tls-setup.md) (WIP!)
  - [The Complexity Tradeoff](complexity-tradeoff.md)
  - [Writing services with fslib and cleanmark](writing-services-with-fslib-and-cleanmark.md)
+
+## Buy Us A Coffee, Buy Us A Beer
+
+Bitcoin - 1LFfhizsBU8r9FpNDe6PdZNziDGvSopNyh
