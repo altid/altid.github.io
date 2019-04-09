@@ -1,5 +1,7 @@
 # All About Altid
 
+![Title Image](altid.jpg)
+
 Welcome!
 
 ## What Is Altid?
