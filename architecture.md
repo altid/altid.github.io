@@ -82,6 +82,8 @@ A server walks the working directory to find any services - that is, directories
 
 ## Servers - Client Connections
 
+![servers services and clients](images/1554827913305.jpg)
+
 A server in Altid multiplexes connections to the underlying state. That is to say, each client may have a unique view from other connected clients. Different clients can be connected to different services, be viewing a different buffer, or the same services and/or buffer. Any content updated will be sent to all clients where applicable.
 
 ## Clients
