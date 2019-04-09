@@ -1,6 +1,6 @@
 # All About Altid
 
-![Title Image](altid.jpg)
+![Title Image](images/altid.jpg)
 
 Welcome!
 
