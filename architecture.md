@@ -89,7 +89,6 @@ A server in Altid multiplexes connections to the underlying state. That is to sa
 
 ## Clients
 
-![Crude example client](images/1554914396555.jpg)
 Clients read the above files, which are formatted in [Altid-flavoured markdown](markdown.md). For a given element, they draw up a UI in the manner they see fit.
 For example:
  - A `ctrl` file could be expressed as a nested menu, as the contents iterate available commands, and command history. 
