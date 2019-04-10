@@ -52,6 +52,7 @@ Inside of those directories is a subset of files, which must include:
 ## Services - Interaction With Clients And Servers
 These individual pieces are combined with a ctrl file, events file, and tabs file from the root of the directory by an Altid server, such as 9p server.
 The result is served, somewhat modified to an Altid client for drawing.
+![Example of creating a client view](images/1554913892117.jpg)
 
 ## Servers
 
