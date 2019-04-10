@@ -64,6 +64,12 @@ code
 `~~strikethrough~~`
 ~~strikethrough~~
 
+`*emphasis* or _emphasis_`
+*emphasis*
+
+`**strong** or __emphasis__`
+**strong**
+
 ## Altid
 
 Images:
