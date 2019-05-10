@@ -65,4 +65,4 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
 ## Buy Us A Coffee, Buy Us A Beer
 
-Bitcoin - 1LFfhizsBU8r9FpNDe6PdZNziDGvSopNyh
+Bitcoin - 1KJB1514FMnzna37dLFA39sd7A9xpWLDFd
