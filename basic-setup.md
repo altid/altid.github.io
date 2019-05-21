@@ -23,7 +23,10 @@ go build -o ircfs github.com/altid/ircfs
 
 go get github.com/altid/9p-server
 go build -o 9p-server github.com/altid/9p-server
-go build -o client github.com/altid/9p-server/client
+
+# We'll grab one of the shell clients, which are adequate for testing
+git clone https://github.com/altid/shell-client
+
 
 ```
 
@@ -91,15 +94,16 @@ To connect to your running server is simple.
 
 
 ```
-# Using the example client
-> example localhost
+cd shell-client/
+altid-sh localhost
+# Or
+#altid-rc localhost
 ```
 
 Or if on a remote machine, and your 9p-server is on a machine with the ip address 192.168.1.104
 
 ```
-# Using example client
-./example 192.168.1.104
+altid-sh 192.168.1.104
 
 ```
 The default port it connects to is `:564`, make sure this matches if you've changed the listening port on 9p-server.
@@ -108,11 +112,11 @@ The default port it connects to is `:564`, make sure this matches if you've chan
 
 As a side note, there are a number of commands you can run from an Altid client. The whole list depends on the service you are connected to, but the following will always be available:
 
- - `buffer <buffer>`: change the current viewed buffer
- - `open <buffer>`: open a buffer
+ - `/buffer <buffer>`: change the current viewed buffer
+ - `/open <buffer>`: open a buffer
    - on IRC, this will connect to a channel. In docfs, it will open the named document at the path sent it. On smsfs, it will start a conversation window with the person at that number
- - `close <buffer>`: closes the buffer, optionally disconnecting any network-based session
- - `quit`: Ends the client session
+ - `/close <buffer>`: closes the buffer, optionally disconnecting any network-based session
+ - `/quit`: Ends the client session
 
 ## Doing Things
 
@@ -143,7 +147,7 @@ If you're connected to an IRC channel, type some text to your friends, and when 
 ## List of Servers and Clients
 
  - [9p server](https://github.com/altid/9p-server): Uses 9p from Plan9
- - [9p server example client](https://github.com/altid/9p-server/blob/master/client/README.md)
+ - [Shell-based clients](https://github.com/altid/shell-client)
  - [linux-client](https://github.com/altid/linux-client): A compile-time plugin based client which allows you to select which server you want to connect to, what type of input you prefer to use, and the graphics drawing library you prefer for how you're using the client.
 
 ### Servers Planned
