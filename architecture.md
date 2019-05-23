@@ -37,7 +37,8 @@ Inside of those directories is a subset of files, which must include:
  | stream
  | title
  | input
- | sidebar
+ | aside
+ | navi
  | status
  | notification
 ```
@@ -45,7 +46,8 @@ Inside of those directories is a subset of files, which must include:
  - `feed`, `document`, or `stream` is the main content of a given buffer. This normally comprises the chat backlog of a chat service, the body of a document, or a link to the underlying stream in the case of a streaming service. (more on that in future updates)
  - `title` is generally the main topic of a chat, the title of a document, and falls back to the name of the open resource.
  - `input` is an append-only file that when present, sends data to the underlying service; such as sending chat messages, or filling in input fields on a form*.
- - `sidebar` is reserved for information related to the buffer, and usually comprises a table of contents for a document, a list of usernames in a chat, or a navigation element for a browsing session
+ - `aside` is reserved for information related to the buffer, such as a list of usernames in a chat
+ - `navi` is reserved navigation elements, such as a site index or Table of Contents
  - `status` shows errors with issued commands, as well as any information about the particular runtime status of the buffer. Chat clients may show user/channel modes, documents may display parsing errors, etc.
  - `notification` is used to signify that the service wishes to signify clients of an important occurance, such as an @mention in a chat client
 
