@@ -37,12 +37,6 @@ nav ul li a:hover {
   color: #e5e5e5;
 }
 
-header blockquote {
-  margin-top: -0.5rem;
-  margin-left: -8rem;
-}
-/* --- */
-
 a {
   text-decoration: none;
   color: #4375d9;
@@ -54,7 +48,6 @@ a:hover {
 
 main {
   padding: 1rem;
-  max-width: 1200px;
   margin: auto;
   color: #323232;
 }
