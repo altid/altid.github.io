@@ -6,6 +6,10 @@ body {
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
+/* Layout hamburger menu for phones */
+
+/* This moves into @media for screens */
+/* --- */
 header {
   background-color: #e5e5e5;
   display: flex;
@@ -22,6 +26,7 @@ nav {
 
 nav ul {
   display: flex;
+  flex-wrap: column;
   margin: 1rem;
   justify-content: space-around;
 }
@@ -41,6 +46,7 @@ header blockquote {
   margin-top: -0.5rem;
   margin-left: -8rem;
 }
+/* --- */
 
 a {
   text-decoration: none;
