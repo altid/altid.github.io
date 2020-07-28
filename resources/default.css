@@ -1,7 +1,5 @@
 body {
   background-color: #e5e5e5;
-  display: grid;
-  grid-gap: 1rem;
   font-size: 1.4rem;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
@@ -18,17 +16,14 @@ header {
 }
 
 nav {
-  /* Remove grid gap between header and nav */
-  margin: -1rem -1rem -0.5rem -1rem;
-  padding: 0 1rem 0 1rem;
   background-color: #323232;
 }
 
 nav ul {
+  padding: 1rem;
   display: flex;
   flex-wrap: column;
-  margin: 1rem;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 nav ul li {
@@ -58,6 +53,7 @@ a:hover {
 }
 
 main {
+  padding: 1rem;
   max-width: 1200px;
   margin: auto;
   color: #323232;
@@ -90,8 +86,6 @@ tr {
 
 footer {
   /* Span the full width */
-  margin: -1rem;
-  padding: 1rem;
   display: flex;
   flex-flow: column;
   align-items: center;
