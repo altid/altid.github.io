@@ -8,7 +8,7 @@ Welcome!
 
   Altid is a [pao](http://tiamat.tsotech.com/pao) inspired playground, using filesystem-based program state representations to decouple the runtime state of a program, from any particulars of how it is presented to the end user.
 
-  This is really a fancy way of saying with altid, you don't have to compromise with having applications that work well on one device, or are only available on one device. Instead, you get what you need from an application, in a way that actually makes sense on the device you're using.
+  This is really a fancy way of saying with Altid, you don't have to compromise with having applications that work well on one device, or are only available on one device. Instead, you get what you need from an application, in a way that actually makes sense on the device you're using.
 
 ## Why?
 
@@ -55,15 +55,12 @@ The chance that you'll need a bespoke client and server side solution is lowered
 
 ## Further Reading
 
- - [Altid-flavored Markdown](markdown.md)
- - [Architectural overview](architecture.md)
- - [Using listen_address](using-listen-address.md)
- - [Basic Setup](basic-setup.md)
- - [Full TLS Setup](full-tls-setup.md) (WIP!)
- - [The Complexity Tradeoff](complexity-tradeoff.md)
- - [Writing services with fslib and cleanmark](writing-services-with-fslib-and-cleanmark.md)
- - [What Is Altid, Really?](whatisaltidreally.md)
+- [Altid-flavored Markdown](markdown.md)
+- [Architectural overview](architecture.md)
+- [Using listen_address](using-listen-address.md)
+- [Basic Setup](basic-setup.md)
+- [Full TLS Setup](full-tls-setup.md) (WIP!)
+- [The Complexity Tradeoff](complexity-tradeoff.md)
+- [Writing services with fslib and cleanmark](writing-services-with-fslib-and-cleanmark.md)
+- [What Is Altid, Really?](whatisaltidreally.md)
 
-## Buy Us A Coffee, Buy Us A Beer
-
-Bitcoin - 1KJB1514FMnzna37dLFA39sd7A9xpWLDFd

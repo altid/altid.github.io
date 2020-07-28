@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+		<title>Altid</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Altid">
+		<meta name="description" content="Altid: Your Stuff, Everywhere">
+		<link rel="stylesheet" text="text/css" href="resources/default.css">
+		<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+
+		<link rel="icon" type="image/png" href="/resources/android-chrome-192x192.png" sizes=192x192>
+		<link rel="icon" type="image/png" href="/resources/android-chrome-512x512.png" sizes=512x512>
+		<link rel="mask-icon" href="/images/altid.svg" color="#5bbad5">
+		<link rel="apple-touch-icon" type="image/png" href="/resources/apple-touch-icon.png"> 
+		<!-- For Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@altid">
+		<meta name="twitter:title" content="@altid">
+		<meta name="twitter:description" content="Altid: Your Stuff, Everywhere">
+		<meta name="twitter:creator" content="@altid">
+		<meta name="twitter:image" content="https://altid.dev/resources/altid.jpg">
+		<!-- Open graph -->
+		<meta property="og:title" content="Altid">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://altid.dev/">
+		<meta property="og:image" content="https://altid.dev/resources/altid.jpg">
+		<meta property="og:description" content="Altid: Your Stuff, Everywhere">
+		<meta property="og:site_name" content="Altid">
+		<!-- organization snippet -->
+		<script type="application/ld+json">
+			{ 
+				"@context" : "http://schema.org",
+				"@type" : "Organization",
+				"name": "Altid",
+				<!--"legalName": "Altid",-->
+				"url": "https://altid.dev",
+				"logo": "https://altid.dev/resources/logo.jpeg",
+				"foundingDate": "2020",
+				<!--"founders": [
+				],-->
+				"address": {
+					"@type": "PostalAddress",
+					<!--"addressLocality": "Prince George",
+					"postalCode": "",
+					"streetAddress": ""-->
+				},
+				<!--"telephone": "(000)000-0000",-->
+				"email": "altid.dev(at)gmail.com",
+				"sameAs": [
+				"https://github.com/altid",
+				"https://patreon.com/altid"
+				]
+			}
+		</script>
+	</head>
+    <body>
+		<header>
+			<img src="resources/altid.jpg" width="400" style="padding:1rem;">
+			<blockquote>Your Stuff, Everywhere</blockquote>
+		</header>
+		<nav>
+			<ul>
+				<!--We want our links to about, the Non-profit, etc here-->
+				<li><a href="about.html">about</a></li>
+				<li><a href="https://github.com/altid">code</a></li>
+				<li><a href="get_started.html">get started</a></li>
+				<li><a href="our_company.html">our company</a></li>
+				<li><a href="news.html">news</a></li>
+			</ul>
+		</nav>
+		<main>
+	    	<section>
+				<table>
+					<caption class="hide">Overview</caption>
+					<thead>
+						<tr class="hide">
+							<th>Icon</th>
+							<th>Header</th>
+							<th>Summary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="showcase">
+							<!--Accessibility-->
+							<td><img src="icons/accessibility.png" loading="lazy" width="64"/></td>
+							<td><h2>Accessibility</h2></td>
+							<td><p>Altid's design promotes accessibility. From the very beginning, we wanted to be sure that all users could benefit from our products. From blind & vision impaired users, to those with limited motor ability, and beyond.</p></td>
+						</tr>
+						<!--Services-->
+						<tr class="showcase">
+							<td><img src="icons/services.png" loading="lazy" width="64"/></td>
+							<td><h2>Services</h2></td>
+							<td><p>We already support many services, from Discord to reading PDFs (needs more)</p></td>
+						</tr>
+						<!--Devices-->
+						<tr class="showcase">
+							<td><img src="icons/devices.png" loading="lazy" width="64"/></td>
+							<td><h2>Devices</h2></td>
+							<td><p>We currently offer clients for Linux, macOS, Windows, and will continue to add platforms as we grow!</p></td>
+						</tr>
+						<!--Control-->
+						<tr class="showcase">
+							<td><img src="icons/control.png" loading="lazy" width="64"/></td>
+							<td><h2>Control</h2></td>
+							<td><p>With Altid, the user is in control. Your programs can run on your computer, or hosted on any major VPS.</p></td>
+						</tr>
+						<!--The Code-->
+						<tr class="showcase">
+							<td><img src="icons/github.png" loading="lazy" width="64"/></td>
+							<td><h2>Open Source</h2></td>
+							<td><p><a href="https://github.com/altid">All of our code</a> is open source, and contributors are always welcome!</p></td>
+						</tr>
+					</tbody>
+					<tfoot >
+						<tr class="showcase">
+							<td><img src="icons/support.png" loading="lazy" width="64"/></td>
+							<td><a href="pages/support.html">Show your support!</a></td>
+							<td><small>*Altid's non-profit status is currently pending</small></td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			<section class="additional">
+				<h2>Additional Information</h2>
+				<ul>
+					<li><a href="pages/architecture.md">Architectural Overview</a></li>
+					<li><a href="pages/basic-setup.md">Basic Setup Guide</a></li>
+					<li><a href="pages/complexity-tradeoff.md">The Complexity Tradeoff</a></li>
+					<li><a href="pages/full-tls-setup.md">Advanced Setup Guide</a></li>
+					<li><a href="pages/markdown.md">Understanding Altid Markup</a></li>
+					<li><a href="pages/using-listen-address.md">Listen Address Guide</a></li>
+					<li><a href="pages/writing-services-with-fslib-and-cleanmark.md">Writing Services</a></li>
+				</ul>
+			</section>
+		</main>
+		<footer>
+			<h2>About Us</h2>
+			<p>Altid is a framework for making software that is network-transparent, so you can use your apps, with your data, anywhere.</p>
+			<small>Copyright 2018, 2019, 2020</small>
+		</footer>
+    </body>    
+</html>
