@@ -85,6 +85,7 @@ footer {
   text-align: center;
   background-color: #323232;
   color: #cdcdcd;
+  padding: 1rem;
 }
 
 @media only screen and (pointer: fine) {
