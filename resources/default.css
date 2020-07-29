@@ -51,7 +51,7 @@ main {
   color: #323232;
 }
 
-header blockquote {
+.tagline {
   height: minmax(400px, 100%);
   text-shadow: 1px 1px 4px #323232;
   margin: auto;
