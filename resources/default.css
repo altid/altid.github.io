@@ -51,7 +51,7 @@ main {
   color: #323232;
 }
 
-header blockquote {
+header h1 {
   height: minmax(400px, 100%);
   text-shadow: 1px 1px 4px #323232;
   margin: auto;
@@ -59,7 +59,6 @@ header blockquote {
   font-weight: bolder;
   font-size: 4rem;
   padding: 2rem;
-  background-image: url('https://altid.dev/resources/trees.png');
 }
 
 main section table tbody{
