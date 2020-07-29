@@ -1,13 +1,10 @@
 body {
+  margin: auto;
   background-color: #e5e5e5;
   font-size: 1.4rem;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-/* Layout hamburger menu for phones */
-
-/* This moves into @media for screens */
-/* --- */
 header {
   background-color: #e5e5e5;
   display: flex;
@@ -47,8 +44,9 @@ a:hover {
 }
 
 main {
-  padding: 1rem;
   margin: auto;
+  max-width: 1200px;
+  padding: 1rem;
   color: #323232;
 }
 
