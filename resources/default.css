@@ -59,7 +59,7 @@ header blockquote {
   font-weight: bolder;
   font-size: 4rem;
   padding: 2rem;
-  background-image: url("trees.png");
+  background-image: url('https://altid.dev/resources/trees.png');
 }
 
 main section table tbody{
