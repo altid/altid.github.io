@@ -102,9 +102,6 @@ footer {
   body {
     font-size: 1rem;
   }
-  nav ul {
-    justify-content: left;
-  }
 }
 
 .hide {
