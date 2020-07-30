@@ -46,6 +46,7 @@ a:hover {
 }
 
 main {
+  width: auto;
   margin: auto;
   max-width: 1200px;
   padding: 1rem;
