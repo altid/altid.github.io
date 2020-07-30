@@ -52,16 +52,6 @@ main {
   color: #323232;
 }
 
-header h1 {
-  height: minmax(400px, 100%);
-  text-shadow: 1px 1px 4px #323232;
-  margin: auto;
-  color: #e5e5e5;
-  font-weight: bolder;
-  font-size: 4rem;
-  padding: 2rem;
-}
-
 main section table tbody{
   display: grid;
   max-width: 1240px;
