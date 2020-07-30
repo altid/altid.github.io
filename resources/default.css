@@ -7,7 +7,6 @@ body {
 
 header {
   margin: auto;
-  min-width: 300px;
   background-color: #e5e5e5;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@ main section table tbody{
   display: grid;
   max-width: 1240px;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
   padding: 1rem 0;
 }
 
@@ -91,7 +90,6 @@ tr {
 }
 
 footer {
-  min-width: 300px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -104,6 +102,9 @@ footer {
 @media only screen and (pointer: fine) {
   body {
     font-size: 1rem;
+  }
+  main section table tbody {
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   }
 }
 
