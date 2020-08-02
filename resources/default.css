@@ -47,11 +47,15 @@ a:hover {
 
 main {
   margin: auto;
-  max-width: 1200px;
   padding: 1rem;
   color: #323232;
 }
 
+main section table caption {
+  padding: 2rem;
+  font-size: 2rem;
+  align-items: center;
+}
 main section table tbody{
   display: grid;
   max-width: 1240px;
