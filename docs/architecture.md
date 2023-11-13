@@ -1,6 +1,9 @@
-# Architectural Overview
+---
+layout: page
+title: Architectural Overview
+---
 
-We'll have some supplementary images in the coming weeks to help clarify this document
+# Architectural Overview
 
 ## Services - Directory Layout
 
