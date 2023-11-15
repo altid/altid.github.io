@@ -1,5 +1,4 @@
 ---
-type: section
 title: Architectural Overview
 ---
 
@@ -7,7 +6,7 @@ title: Architectural Overview
 
 ## Services - Directory Layout
 
-Altid services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here [markdown guide](markdown.md).
+Altid services are expressed as a directory of named files, and subdirectories of other named files. The content of any such file is markdown, described here [markdown guide](documents/markdown).
 
 A service directory is laid out as follows:
 
@@ -57,7 +56,7 @@ Inside of those directories is a subset of files, which must include:
 ## Services - Interaction With Clients And Servers
 These individual pieces are combined with a ctrl file, events file, and tabs file from the root of the directory by an Altid server, such as 9p server.
 The result is served, somewhat modified to an Altid client for drawing.
-![Example of creating a client view](images/1554913892117.jpg)
+![Example of creating a client view](/images/1554913892117.jpg)
 
 ## Servers
 
@@ -88,13 +87,13 @@ A server walks the working directory to find any services - that is, directories
 
 ## Servers - Client Connections
 
-![servers services and clients](images/1554827913305.jpg)
+![servers services and clients](/images/1554827913305.jpg)
 
 A server in Altid multiplexes connections to the underlying state. That is to say, each client may have a unique view from other connected clients. Different clients can be connected to different services, be viewing a different buffer, or the same services and/or buffer. Any content updated will be sent to all clients where applicable.
 
 ## Clients
 
-Clients read the above files, which are formatted in [Altid-flavoured markdown](markdown.md). For a given element, they draw up a UI in the manner they see fit.
+Clients read the above files, which are formatted in [Altid-flavoured markdown](documents/markdown.md). For a given element, they draw up a UI in the manner they see fit.
 For example:
  - A `ctrl` file could be expressed as a nested menu, as the contents iterate available commands, and command history. 
  - A `status` file could be expressed as a statefully displayed toast when scrolling on a phone, or a persistent bar on a terminal client

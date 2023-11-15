@@ -1,8 +1,8 @@
 ---
-type: section
+title: "Altid-flavoured markdown"
 ---
 
-# Altid-flavored markdown
+# Altid-flavoured markdown
 
 Below is a list of markdown elements supported by altid, as well as a rough example of how they may be displayed by a client.
 

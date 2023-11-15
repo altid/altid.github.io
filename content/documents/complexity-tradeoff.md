@@ -1,5 +1,5 @@
 ---
-type: section
+title: "Complexity Tradeoffs"
 ---
 
 # Complexity Tradeoffs

@@ -1,8 +1,8 @@
 ---
-type: section
+title: "Writing Services"
 ---
 
-# Writing Services with fslib and cleanmark
+# Writing Services
 
 [fslib](https://github.com/altid/fslib) and [cleanmark](https://github.com/altid/cleanmark) were designed to trivialize writing conforment services.
 

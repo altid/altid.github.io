@@ -1,5 +1,5 @@
 ---
-type: section
+title: "Basic setup"
 ---
 
 # Walkthrough Of A Basic Setup

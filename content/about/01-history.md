@@ -2,11 +2,12 @@
 type: section
 ---
 
-# A Little History
+# Introduction
 
-Altid started out under the name **ubqt**; a pun on _ubiquity_, which is what the project was trying to provide for applications.
-Unfortunately, the name was _very_ common, and to avoid legal issues in the future a new name had to be selected. Studying Danish, I learned the word _Altid_, meaning _Always_; and it seemed like a perfect fit for a name.
+Altid, originally known as **ubqt**, emerged with a vision of providing ubiquity for your applications, while being highly accessible. Seeking a distinctive identity, the project evolved into Altid, inspired by the Danish word _Altid_, signifying _Always_. Our journey centers on delivering customizable accessibility software, empowering users with diverse needs. Just like our name suggests, Altid is here to provide an always accessible and inclusive digital experience.
 
-## About Us
+## Our Mission
 
-Currently the efforts of a single programmer, with some feedback from friends and family Altid is working towards full non-profit status, and pending funding will bring in specialists in accessibility, user interface design, etc
+Altid, born from the passion of a solitary programmer and shaped by input from friends and family, is on a mission. We aspire to unlock the full potential of accessible, always-available programs. As we work towards our goal, Altid looks forward to welcoming specialists in accessibility, user interface design, and more. Join us on our journey to create a community-driven space for customizable software solutions that cater to diverse needs.
+
+## The Team
