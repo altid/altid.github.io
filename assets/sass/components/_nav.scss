@@ -1,0 +1,24 @@
+.nav {
+    box-shadow: 1px 1px 10px _palette(accent);
+    background-color: _palette(accent);
+    ul {
+        @include vendor('display', 'flex');
+        @include vendor('flex-wrap', 'column');
+        @include vendor('align-items', 'center');
+        // We don't need smaller really
+        height: _size(element-height) + _size(padding, small);
+        li {
+            padding: 0 1rem;
+            font-weight: bold;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: _palette(link);
+
+                &:hover {
+                    color: _palette(fg-alt);
+                }
+            }
+        }
+    }
+  }

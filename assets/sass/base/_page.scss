@@ -1,0 +1,69 @@
+/* Basic */
+
+	// MSIE: Required for IEMobile.
+    @-ms-viewport {
+        width: device-width;
+    }
+
+// MSIE: Prevents scrollbar from overlapping content.
+    body {
+        -ms-overflow-style: scrollbar;
+    }
+
+// Ensures page width is always >=320px.
+    @include breakpoint('<=xsmall') {
+        html, body {
+            min-width: 320px;
+        }
+    }
+
+// Set box model to border-box.
+// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+body {
+    // Stops initial animations until page loads.
+        &.is-preload {
+            *, *:before, *:after {
+                @include vendor('animation', 'none !important');
+                @include vendor('transition', 'none !important');
+            }
+        }
+
+    // For jump to content link
+        a.screenreader-text {
+            display: block;
+            position: absolute;
+            left: -999px;
+            top: -999px;
+        }
+
+        a.screenreader-text:focus {
+            @include padding(0.2rem, 0.2rem);
+            left: 0;
+            top: 0;
+            background: #ffc;
+            border:1px solid #990000;
+        }
+
+}
+
+@mixin color_page($p: null) {
+    // Pull colour from vars
+     body {
+        background-color: _palette($p, bg);
+        color: _palette($p, fg);
+    }
+}
+
+@include color_page;
+
+@media (prefers-color-scheme: dark) {
+    @include color-page(invert);
+}

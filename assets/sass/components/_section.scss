@@ -1,0 +1,25 @@
+/* Section */
+
+    .section {
+        @include padding(_size(padding, large), _size(padding, small));
+        // TODO: This can move to typography as defaults
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        ul {
+            @include padding(0, _size(padding, small));
+        }
+        li,
+        p {
+            font-size: 0.9rem;
+        }
+    }

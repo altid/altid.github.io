@@ -1,0 +1,16 @@
+/* Deck of cards */
+    .deck {
+        @include padding(4rem, 2rem);
+        // We want the deck to feature over the gutters
+        max-width: _size(inner) + (_size(gutter) * 2);
+        margin: auto;
+
+        ul {
+            @include vendor('display', 'grid');
+            @include vendor('grid-template-columns', repeat(auto-fill, minmax(300px, 1fr)));
+            @include padding(1rem, 0);
+            grid-gap: 1rem;
+            list-style: none;
+        }
+    }
+

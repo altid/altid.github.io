@@ -1,0 +1,30 @@
+.hero {
+    @include vendor(background-size, cover);
+    background-repeat: no-repeat;
+    background-image: url('/images/trees.jpg');
+    h1 {
+        @include padding(4rem, 0);
+        margin: auto;
+        font-weight: bold;
+        text-align: center;
+        font-size: 3.5rem;
+        max-width: 800px;
+        em {
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin color-hero($p: null) {
+    .hero {
+        h1 {
+            color: _palette($p, bg);
+            text-shadow: 1px 1px 4px _palette($p, accent);
+        }
+    }
+}
+
+@include color-hero;
+@media (prefers-color-scheme: dark) {
+    @include color-hero(invert);
+}

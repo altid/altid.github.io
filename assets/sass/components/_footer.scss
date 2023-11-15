@@ -1,0 +1,11 @@
+.footer {
+    @include vendor('display', 'flex');
+    @include vendor('flex-flow', 'column');
+    @include vendor('align-items', 'center');
+    text-align: center;
+    background-color: _palette(accent);
+    color: _palette(bg-bold);
+    img {
+        @include padding(4rem, 2rem);
+    }
+}

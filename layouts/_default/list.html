@@ -1,0 +1,9 @@
+{{ define "main" }}
+    {{- partial "hero" -}}
+    {{- partial "nav" . -}}
+    {{ $main := .Site.GetPage "/main" }}
+    {{ range $main.Resources.Match "*.md" }}
+        {{ $params := merge .Page.Params (dict "content" .Content) }}
+        {{ partial .Page.Params.type $params }}
+    {{ end }}
+{{ end }}

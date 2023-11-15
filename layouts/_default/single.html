@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{- partial "nav" . -}}
+    {{ range .Resources.Match "*.md" }}
+        {{ $params := merge .Page.Params (dict 
+            "content" .Content
+        ) }}
+        {{ partial .Page.Params.type $params }}
+    {{ end }}
+
+    {{ with .Page.Params.action }}
+        {{ partial "banner" (dict
+            "image"  .image
+        )}}
+    {{ end }}
+{{ end }}

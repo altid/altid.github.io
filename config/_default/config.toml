@@ -1,0 +1,39 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+title = "Altid"
+copyright = "{year}"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = "true"
+
+
+# Local
+baseURL = "https://altid.github.io"
+publishDir = "public"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+disableKinds = ['taxonomy', 'term']
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  description = "Altid"
+  logo = "resources/altid.png"
+  favicon = true
+  copyright = "{year}"
+
+[menu]
+  [[menu.main]]
+    pageRef = "/"
+    name = "Home"
+    url = "/"
+    weight = 10

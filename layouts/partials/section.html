@@ -1,0 +1,4 @@
+<section class="section">
+    {{ with .title }}<h2>{{ . }}</h2>{{ end }}
+    {{ .content | safeHTML }}
+</section>

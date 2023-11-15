@@ -1,0 +1,70 @@
+// Misc.
+$misc: (
+    z-index-base:		10000,
+    overlay-opacity:	0.5,
+    lightbox-opacity:	0.75,
+);
+
+// Duration.
+$duration: (
+    menu:				0.5s,
+    transition:			0.2s,
+    gallery-lightbox:	0.5s,
+    gallery-delay:		0.15s,
+    items-delay:		0.15s,
+    on-load:			0.75s,
+    on-scroll:			0.75s
+);
+
+// Size.
+$size: (
+    border-radius:		4px,
+    border-radius-alt:	0.5rem,
+    border-width:		1px,
+    element-height:		2.75rem,
+    element-margin:		2rem,
+    gutter:				3.5rem,
+    inner:				64rem,
+    padding:			(
+        default:		7rem,
+        xlarge:			5rem,
+        large:			4rem,
+        medium:			3rem,
+        small:			2rem
+    )
+);
+
+// Font.
+$font: (
+    family:				("Avenir Next", Avenir, sans-serif),
+    family-fixed:		("Avenir Next", Avenir, monospace),
+    weight:				400,
+    weight-bold:		600,
+    kerning:			-0.05em,
+    kerning-alt:		0.125em
+);
+
+// Palette.
+$palette: (
+    link:               #4275d9,
+    bg:					rgb(229, 229, 229),
+    bg-alt:				#f5f5f5,
+    bg-bold:            #ffffff,
+    fg:					#333,
+    fg-alt:             #444,
+    fg-bold:			#555,
+    overlay:            rgba(255, 255, 255, 0.25),
+    accent:				#323232,
+
+    invert: (
+        bg:				rgb(26, 26, 26),
+        bg-alt:			#555,
+        bg-bold:        #000,
+        fg:				#e5e5e5,
+        fg-alt:         #eee,
+        fg-bold:		#f5f5f5,
+        fg-light:		#fff,
+        overlay:        rgba(0, 0, 0, 0.4),
+        accent:			#c4c4c4
+    )
+);

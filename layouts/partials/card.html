@@ -1,0 +1,5 @@
+<div class="card {{ if not (eq .invertable false) }}invertable{{ end }} style{{ .style | default 1 }}">
+    <img src="{{ .image }}" loading="lazy" width="{{ .width | default 64 }}">
+    <h3>{{ .name | transform.Markdownify}}</h3>
+    <p>{{ .description | transform.Markdownify}}</p>
+</div>

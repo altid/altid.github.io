@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+ <html lang="en">
+	{{ partial "head" . }}
+	<body class="is-preload">
+		<a class="screenreader-text" href="#main-content">Skip to content</a>
+		<main id="main-content">
+      		{{- block "main" . }}{{- end -}}
+		</main>
+        {{- partial "scripts" . -}}
+		{{- partial "footer" . -}}
+	</body>
+</html>
